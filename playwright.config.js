@@ -11,6 +11,7 @@ module.exports = defineConfig({
   use: {
     baseURL: 'https://als-df-stg.elysium-dfbt.com/m/en',
     trace: 'on-first-retry',
+    screenshot: 'only-on-failure'
   },
   projects: [
     {
