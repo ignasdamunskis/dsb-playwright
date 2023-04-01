@@ -13,6 +13,7 @@ module.exports = defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {
+    // headless: false,
     baseURL: 'https://als-df-stg.elysium-dfbt.com/m/en',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure'
