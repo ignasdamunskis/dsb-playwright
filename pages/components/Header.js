@@ -4,6 +4,7 @@ const { expect } = require('@playwright/test');
 class Header {
   constructor(page) {
     this.page = page;
+    // pre login
     this.loginTrigger = this.page.locator('.header-button.login');
     this.loginModal = this.page.locator('.modal.login-modal');
     this.loginForm = this.page.locator('form#login');
@@ -12,6 +13,9 @@ class Header {
     this.loginSubmit = this.loginForm.locator('#login_submit');
     this.loginError = this.page.locator('.popup.popup-component.error');
     this.loginLoader = this.page.locator('.login-modal-loading > .loading-overlay');
+    // post login
+    this.accountMenuDropdown = this.page.locator('.header-button.account');
+    this.logoutButton = this.page.locator('.logout-section');
   }
 
   async isLoggedOut() {
@@ -41,6 +45,11 @@ class Header {
     await expect(this.loginTrigger).toBeHidden();
     await expect(this.page.locator('.header-buttons.logout')).toHaveCount(0);
     await expect(this.page.locator('.header-buttons.loggedin')).toHaveCount(1);
+  };
+
+  async logout() {
+    await this.accountMenuDropdown.click();
+    await this.logoutButton.click();
   };
 }
 
