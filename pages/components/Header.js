@@ -39,6 +39,7 @@ class Header {
 
   async isLoggedIn() {
     await expect(this.loginLoader).toHaveCount(0);
+    await this.page.reload();
     await expect(this.loginModal).toBeHidden();
     await expect(this.loginForm).toBeHidden();
     await expect(this.loginError).toHaveCount(0);

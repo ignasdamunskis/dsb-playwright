@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 const Homepage = require('../pages/Homepage');
 
-test('Mobile dafabet login', async ({ page }) => {
+test('Mobile dafabet login @important', async ({ page }) => {
   const homepage = new Homepage(page);
   await homepage.navigate();
   await homepage.header.isLoggedOut();
