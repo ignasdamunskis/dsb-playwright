@@ -1,7 +1,6 @@
 {
   "name": "dsb-playwright",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {},
   "keywords": [],
@@ -9,5 +8,21 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.32.1"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "fsevents": "^2.3.2",
+    "playwright-core": "^1.32.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ignasdamunskis/dsb-playwright.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ignasdamunskis/dsb-playwright/issues"
+  },
+  "homepage": "https://github.com/ignasdamunskis/dsb-playwright#readme",
+  "description": ""
 }
